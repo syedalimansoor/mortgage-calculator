@@ -1,0 +1,35 @@
+.form {
+  padding: var(--padding-global);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.7em;
+  font-size: 1.25rem;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: var(--font-weight-bold);
+}
+
+.row {
+  display: flex;
+  gap: 1em;
+
+  > * {
+    flex: 1;
+  }
+}
+
+.footer {
+  margin-top: 2.3em;
+  /* align-self: flex-start; */
+}

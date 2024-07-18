@@ -1,0 +1,12 @@
+.label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+  color: var(--slate-700);
+}
+
+.error {
+  color: var(--red);
+  font-size: 0.9rem;
+  margin-top: 0.5em;
+}

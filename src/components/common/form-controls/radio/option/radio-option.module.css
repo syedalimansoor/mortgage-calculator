@@ -1,0 +1,63 @@
+.option {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  gap: 0.8em;
+  border: 1px solid var(--slate-500);
+  padding: var(--padding-inputs);
+  border-radius: var(--radius-inputs);
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--slate-900);
+  transition-property: border-color, background-color;
+  transition-duration: 50ms;
+  transition-timing-function: ease-in-out;
+
+  &[data-checked] {
+    cursor: default;
+    transition-property: background-color;
+    background-color: hsl(from var(--lime) h s l / 0.1);
+    border-color: var(--lime);
+  }
+
+  &:hover:not([data-checked]):not(:focus-within) {
+    border-color: var(--slate-900);
+  }
+
+  &:focus-within:not([data-checked]) {
+    outline: 2px solid var(--slate-900);
+  }
+}
+
+.indicator {
+  --size: 1.2rem;
+  width: var(--size);
+  height: var(--size);
+  border: 2px solid var(--slate-700);
+  border-radius: 50%;
+  position: relative;
+  --padding: 0.15rem;
+
+  &[data-checked] {
+    border-color: var(--lime);
+
+    .icon {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}
+
+.icon {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--lime);
+  --size: calc(100% - var(--padding) * 2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 100ms ease-in-out;
+}

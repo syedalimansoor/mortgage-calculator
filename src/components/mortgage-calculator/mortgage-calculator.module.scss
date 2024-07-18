@@ -1,0 +1,19 @@
+@use "@/styles/breakpoints";
+
+.calculator {
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  max-width: 62.75rem;
+
+  box-shadow: 0 1em 5em -1em var(--slate-300);
+}
+
+@media (width < breakpoints.$tablet) {
+  .calculator {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,5 @@
+.results {
+  padding: var(--padding-global);
+  background-color: var(--slate-900);
+  border-bottom-left-radius: 3em;
+}

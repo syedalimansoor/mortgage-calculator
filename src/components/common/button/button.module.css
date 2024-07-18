@@ -1,0 +1,50 @@
+.button {
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.primary {
+  composes: button;
+  background-color: var(--lime);
+  color: var(--slate-900);
+  padding: 0.7em 2em;
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+  border-radius: 99em;
+  transition-property: box-shadow, transform;
+  transition-duration: 50ms;
+  transition-timing-function: ease-in-out;
+
+  &:focus {
+    outline: 3px solid var(--lime);
+    outline-offset: 4px;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 20px -10px var(--lime);
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translateY(3px);
+  }
+}
+
+.link {
+  composes: button;
+  color: var(--slate-700);
+  text-decoration: underline;
+  font-size: 1rem;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+  transition: color 100ms ease-in-out;
+
+  &:hover {
+    color: var(--slate-900);
+  }
+}

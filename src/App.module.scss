@@ -1,0 +1,14 @@
+@use "@/styles/breakpoints";
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--slate-100);
+}
+
+@media (width < breakpoints.$mobile) {
+  .wrapper {
+    place-items: stretch;
+  }
+}

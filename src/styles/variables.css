@@ -11,4 +11,8 @@
 
   --font-weight-regular: 500;
   --font-weight-bold: 700;
+
+  --padding-global: 2.25em;
+  --padding-inputs: 0.55em 1em;
+  --radius-inputs: 0.4em;
 }
