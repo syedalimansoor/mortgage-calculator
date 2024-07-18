@@ -15,7 +15,12 @@ const initialValues: FormState = {
   mortgageType: null,
 };
 
-function InputForm() {
+interface Props {
+  onSubmit: (values: FormState) => void;
+  onReset: () => void;
+}
+
+function InputForm(props: Props) {
   const form = useForm<FormState>({
     initialValues,
     validate: {
@@ -26,15 +31,16 @@ function InputForm() {
     },
   });
 
-  const handleSubmit: (values: FormState) => void = useCallback((values) => {
-    console.log(values);
-  }, []);
+  const handleReset = useCallback(() => {
+    form.reset();
+    props.onReset();
+  }, [form, props.onReset]);
 
   return (
-    <form className={styles.form} onSubmit={form.onSubmit(handleSubmit)}>
+    <form className={styles.form} onSubmit={form.onSubmit(props.onSubmit)}>
       <header className={styles.header}>
         <h1 className={styles.title}>Mortgage Calculator</h1>
-        <Button onClick={form.reset} variant="link" type="reset">
+        <Button onClick={handleReset} variant="link" type="reset">
           Clear All
         </Button>
       </header>
@@ -57,6 +63,7 @@ function InputForm() {
             label="Interest Rate"
             rightSection="%"
             min={0}
+            max={100}
             {...form.getInputProps("interestRate")}
           />
         </div>
