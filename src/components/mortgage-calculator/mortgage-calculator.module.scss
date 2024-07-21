@@ -17,5 +17,6 @@
 
   @media (width <= breakpoints.$mobile) {
     border-radius: 0;
+    box-shadow: none;
   }
 }
