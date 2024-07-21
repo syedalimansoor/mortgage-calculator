@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 function EmptyState() {
   return (
-    <section className={clsx(styles.wrapper, resultsStyles.wrapper)}>
+    <section className={clsx(resultsStyles.wrapper, styles.wrapper)}>
       <IllustrationEmpty />
       <h2>Results shown here</h2>
       <p className={styles.paragraph}>

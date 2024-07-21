@@ -10,7 +10,8 @@
   height: 100%;
 
   @media (width <= breakpoints.$mobile) {
-    padding-block: 4rem;
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
   }
 }
 
