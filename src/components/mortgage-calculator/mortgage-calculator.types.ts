@@ -8,4 +8,5 @@ export interface MortgageCalculatorFormState {
 export interface MortgageCalculatorResults {
   monthlyRepayment: number;
   totalRepayment: number;
+  mortgageType: "repayment" | "interest-only";
 }
