@@ -4,7 +4,7 @@ import {
   PropsWithChildren,
   ReactNode,
 } from "react";
-import styles from "./button.module.css";
+import styles from "./button.module.scss";
 import clsx from "clsx";
 
 interface Props extends ComponentProps<"button"> {

@@ -6,10 +6,8 @@
   min-height: 100vh;
   background-color: var(--slate-100);
   padding: 2.5rem;
-}
-
-@media (width < breakpoints.$mobile) {
-  .wrapper {
+  @media (width < breakpoints.$mobile) {
     place-items: stretch;
+    padding: 0;
   }
 }

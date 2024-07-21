@@ -1,3 +1,5 @@
+@use "@/styles/breakpoints";
+
 .button {
   border: none;
   background: none;
@@ -33,10 +35,17 @@
     box-shadow: none;
     transform: translateY(3px);
   }
+
+  @media (width <= breakpoints.$mobile) {
+    padding: 0.7em 1.5em;
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
 }
 
 .link {
   composes: button;
+  padding: 0;
   color: var(--slate-700);
   text-decoration: underline;
   font-size: 1rem;

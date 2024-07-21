@@ -1,5 +1,12 @@
+@use "@/styles/breakpoints";
+
 .form {
-  padding: var(--padding-global);
+  --padding: var(--padding-global);
+  padding: var(--padding);
+
+  @media (width <= breakpoints.$mobile) {
+    --padding: var(--padding-global-mobile);
+  }
 }
 
 .header {
@@ -7,6 +14,12 @@
   justify-content: space-between;
   margin-bottom: 1.7em;
   font-size: 1.25rem;
+
+  @media (width <= breakpoints.$mobile) {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5em;
+  }
 }
 
 .body {
@@ -26,6 +39,10 @@
 
   > * {
     flex: 1;
+  }
+
+  @media (width <= breakpoints.$mobile) {
+    flex-direction: column;
   }
 }
 

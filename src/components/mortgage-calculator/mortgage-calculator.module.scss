@@ -10,10 +10,12 @@
   max-width: 62.75rem;
 
   box-shadow: 0 1em 5em -1em var(--slate-300);
-}
-
-@media (width <= breakpoints.$tablet) {
-  .calculator {
+  @media (width <= breakpoints.$tablet) {
     grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  @media (width <= breakpoints.$mobile) {
+    border-radius: 0;
   }
 }

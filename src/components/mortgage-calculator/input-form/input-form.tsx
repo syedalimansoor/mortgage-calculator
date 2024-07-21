@@ -1,5 +1,5 @@
 import Button from "@/components/common/button";
-import styles from "./input-form.module.css";
+import styles from "./input-form.module.scss";
 import { useCallback } from "react";
 import NumberInput from "@/components/common/form-controls/number-input";
 import IconCalculator from "@/assets/icon-calculator.svg?react";
