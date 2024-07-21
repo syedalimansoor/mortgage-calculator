@@ -23,7 +23,11 @@ const Results = (props: Props) => {
       </p>
       <output className={styles.output}>
         <div>
-          <h3 className={styles.outputLabel}>Your monthly repayments</h3>
+          <h3 className={styles.outputLabel}>
+            {props.results.mortgageType === "repayment"
+              ? "Your monthly repayments"
+              : "Your first interest payment"}
+          </h3>
           <strong className={styles.monthlyRepayment}>
             <CountUp
               end={props.results.monthlyRepayment}
@@ -36,7 +40,9 @@ const Results = (props: Props) => {
         <Divider className={styles.divider} />
         <div>
           <h3 className={styles.outputLabel}>
-            Total you'll repay over the term
+            {props.results.mortgageType === "repayment"
+              ? "Total you'll repay over the term"
+              : "Total interest you'll pay"}
           </h3>
           <strong className={styles.totalRepayment}>
             <CountUp
