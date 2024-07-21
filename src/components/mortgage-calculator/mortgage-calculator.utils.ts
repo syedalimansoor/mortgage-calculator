@@ -9,7 +9,10 @@ function calculateMonthlyRepayment(
   const monthlyInterestRate = interestRate / 12 / 100;
   const totalPayments = mortgageTerm * 12;
 
-  if (mortgageType === "repayment") {
+  if (interestRate === 0) {
+    return mortgageAmount / totalPayments;
+  }
+
     return (
       mortgageAmount *
       (monthlyInterestRate /
