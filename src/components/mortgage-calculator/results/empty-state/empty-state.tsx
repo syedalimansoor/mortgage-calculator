@@ -1,4 +1,4 @@
-import styles from "./empty-state.module.css";
+import styles from "./empty-state.module.scss";
 import resultsStyles from "../results.module.scss";
 import IllustrationEmpty from "@/assets/illustration-empty.svg?react";
 import clsx from "clsx";

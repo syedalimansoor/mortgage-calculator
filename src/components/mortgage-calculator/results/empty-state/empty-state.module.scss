@@ -1,3 +1,5 @@
+@use "@/styles/breakpoints";
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -6,6 +8,10 @@
   text-align: center;
   gap: 1em;
   height: 100%;
+
+  @media (width <= breakpoints.$mobile) {
+    padding-block: 4rem;
+  }
 }
 
 .paragraph {
