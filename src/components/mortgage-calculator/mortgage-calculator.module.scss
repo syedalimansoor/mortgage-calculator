@@ -12,7 +12,7 @@
   box-shadow: 0 1em 5em -1em var(--slate-300);
 }
 
-@media (width < breakpoints.$tablet) {
+@media (width <= breakpoints.$tablet) {
   .calculator {
     grid-template-columns: 1fr;
   }

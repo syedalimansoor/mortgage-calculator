@@ -6,12 +6,6 @@
   text-align: center;
   gap: 1em;
   height: 100%;
-
-  padding: var(--padding-global);
-  background-color: var(--slate-900);
-  border-bottom-left-radius: 3em;
-
-  color: var(--white);
 }
 
 .paragraph {

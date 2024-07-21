@@ -1,7 +1,7 @@
 import { Divider } from "@mantine/core";
 import { MortgageCalculatorResults } from "../mortgage-calculator.types";
 import EmptyState from "./empty-state";
-import styles from "./results.module.css";
+import styles from "./results.module.scss";
 import CountUp from "react-countup";
 
 interface Props {
@@ -14,7 +14,7 @@ const Results = (props: Props) => {
   }
 
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapperFilled}>
       <h2>Your results</h2>
       <p className={styles.paragraph}>
         Your results are shown below based on the information you provided. To

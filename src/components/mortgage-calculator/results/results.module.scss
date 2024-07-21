@@ -1,8 +1,18 @@
+@use "@/styles/breakpoints";
+
 .wrapper {
   padding: var(--padding-global);
   background-color: var(--slate-900);
   border-bottom-left-radius: 3em;
   color: var(--white);
+
+  @media (width <= breakpoints.$tablet) {
+    border-bottom-left-radius: unset;
+  }
+}
+
+.wrapperFilled {
+  composes: wrapper;
   display: flex;
   flex-direction: column;
   gap: 1em;
