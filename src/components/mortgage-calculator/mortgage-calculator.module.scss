@@ -10,6 +10,8 @@
   max-width: 62.75rem;
 
   box-shadow: 0 1em 5em -1em var(--slate-300);
+  animation: slideIn 1s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+
   @media (width <= breakpoints.$tablet) {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
@@ -18,5 +20,17 @@
   @media (width <= breakpoints.$mobile) {
     border-radius: 0;
     box-shadow: none;
+    animation: none;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
